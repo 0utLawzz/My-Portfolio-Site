@@ -51,7 +51,7 @@ export default function AdminLogin() {
   if (checkingSession) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
-        <span className="text-[#FFE600] font-mono uppercase">Authenticating...</span>
+        <span className="text-[#FF6A00] font-mono uppercase">Authenticating...</span>
       </div>
     );
   }
@@ -59,12 +59,12 @@ export default function AdminLogin() {
   return (
     <div className="min-h-screen bg-black flex items-center justify-center px-6" style={{ fontFamily: "'Space Mono', monospace" }}>
       <div className="w-full max-w-sm">
-        <div className="border-[3px] border-[#FFE600] bg-black shadow-[8px_8px_0_#FFE600] p-8">
+        <div className="border-[3px] border-[#FF6A00] bg-black shadow-[8px_8px_0_#FF6A00] p-8">
           <div className="mb-8 text-center">
             <h1 className="text-4xl font-bold text-white uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
               OUTLAWZ LABS™
             </h1>
-            <div className="mt-2 text-[#FFE600] text-xs font-mono uppercase tracking-widest">ADMIN ACCESS</div>
+            <div className="mt-2 text-[#FF6A00] text-xs font-mono uppercase tracking-widest">ADMIN ACCESS</div>
           </div>
 
           <div className="border-[3px] border-gray-800 p-2 mb-6 font-mono text-xs text-gray-500 bg-[#111]">
@@ -81,7 +81,7 @@ export default function AdminLogin() {
                 type="password"
                 placeholder="Enter admin password"
                 data-testid="input-admin-password"
-                className="w-full border-[3px] border-gray-600 bg-[#111] text-white px-4 py-3 font-mono text-sm focus:outline-none focus:border-[#FFE600] transition-colors"
+                className="w-full border-[3px] border-gray-600 bg-[#111] text-white px-4 py-3 font-mono text-sm focus:outline-none focus:border-[#FF6A00] transition-colors"
               />
               {errors.password && (
                 <p className="text-[#FF2D20] text-xs font-mono mt-1">{errors.password.message}</p>
@@ -92,16 +92,16 @@ export default function AdminLogin() {
               type="submit"
               disabled={adminLogin.isPending}
               data-testid="button-admin-login"
-              className="w-full border-[3px] border-[#FFE600] bg-[#FFE600] text-black py-4 font-bold uppercase text-sm tracking-widest hover:bg-transparent hover:text-[#FFE600] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full border-[3px] border-[#FF6A00] bg-[#FF6A00] text-black py-4 font-bold uppercase text-sm tracking-widest hover:bg-transparent hover:text-[#FF6A00] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {adminLogin.isPending ? "VERIFYING..." : "ACCESS SYSTEM"}
             </button>
           </form>
 
-          <p className="mt-6 text-center text-gray-700 text-xs font-mono">
-            DEFAULT: outlawz2025
+          <p className="mt-6 text-center text-gray-500 text-xs font-mono">
+            Admin access is configured by the site owner.
           </p>
-        </div>
+</div>
       </div>
     </div>
   );
