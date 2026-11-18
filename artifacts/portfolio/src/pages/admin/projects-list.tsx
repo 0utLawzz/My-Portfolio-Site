@@ -50,12 +50,12 @@ export default function AdminProjects() {
             <h1 className="text-5xl font-bold text-black uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
               PROJECTS
             </h1>
-            <div className="w-16 h-[3px] bg-[#FFE600] mt-2" />
+            <div className="w-16 h-[3px] bg-[#FF6A00] mt-2" />
           </div>
           <Link
             href="/admin/projects/new"
             data-testid="button-new-project"
-            className="border-[3px] border-black bg-[#FFE600] text-black px-6 py-3 font-bold uppercase text-sm shadow-[4px_4px_0_#0A0A0A] hover:shadow-[2px_2px_0_#0A0A0A] hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
+            className="border-[3px] border-black bg-[#FF6A00] text-black px-6 py-3 font-bold uppercase text-sm shadow-[4px_4px_0_#0A0A0A] hover:shadow-[2px_2px_0_#0A0A0A] hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
           >
             + NEW PROJECT
           </Link>
@@ -88,7 +88,7 @@ export default function AdminProjects() {
                 </div>
                 <div className="col-span-2">
                   {p.category && (
-                    <span className="border-2 border-black px-2 py-0.5 text-xs font-bold uppercase bg-[#FFE600] text-black">
+                    <span className="border-2 border-black px-2 py-0.5 text-xs font-bold uppercase bg-[#FF6A00] text-black">
                       {p.category}
                     </span>
                   )}
@@ -96,14 +96,14 @@ export default function AdminProjects() {
                 <div className="col-span-2">
                   <span className={`border-2 border-black px-2 py-0.5 text-xs font-bold uppercase ${
                     p.status === "active" ? "bg-[#00FF41] text-black" :
-                    p.status === "wip" ? "bg-[#FFE600] text-black" :
+                    p.status === "wip" ? "bg-[#FF6A00] text-black" :
                     "bg-gray-300 text-black"
                   }`}>
                     {p.status}
                   </span>
                 </div>
                 <div className="col-span-1 flex justify-center">
-                  {p.featured && <Star size={16} className="text-[#FFE600] fill-[#FFE600]" />}
+                  {p.featured && <Star size={16} className="text-[#FF6A00] fill-[#FF6A00]" />}
                 </div>
                 <div className="col-span-3 flex gap-2 justify-end">
                   {p.github_url && (
@@ -119,7 +119,7 @@ export default function AdminProjects() {
                   <Link
                     href={`/admin/projects/${p.id}/edit`}
                     data-testid={`button-edit-${p.id}`}
-                    className="p-2 border-[2px] border-black hover:bg-[#FFE600] transition-colors"
+                    className="p-2 border-[2px] border-black hover:bg-[#FF6A00] transition-colors"
                   >
                     <Edit size={14} />
                   </Link>
@@ -139,7 +139,7 @@ export default function AdminProjects() {
             <p className="font-mono text-gray-500 uppercase tracking-wider text-sm mb-4">No projects yet</p>
             <Link
               href="/admin/projects/new"
-              className="inline-block border-[3px] border-black px-6 py-3 font-bold uppercase text-sm bg-[#FFE600] text-black shadow-[4px_4px_0_#0A0A0A]"
+              className="inline-block border-[3px] border-black px-6 py-3 font-bold uppercase text-sm bg-[#FF6A00] text-black shadow-[4px_4px_0_#0A0A0A]"
             >
               CREATE FIRST PROJECT
             </Link>

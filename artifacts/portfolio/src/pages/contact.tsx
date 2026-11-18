@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useSubmitContact } from "@workspace/api-client-react";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, MessageSquare, Github } from "lucide-react";
+import { Mail, Github } from "lucide-react";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -17,7 +17,6 @@ type ContactForm = z.infer<typeof contactSchema>;
 
 const contactInfo = [
   { icon: Mail, label: "EMAIL", value: "net2outlawzz@gmail.com", href: "mailto:net2outlawzz@gmail.com" },
-  { icon: MessageSquare, label: "WHATSAPP", value: "+92 332 5195959", href: "https://wa.me/923325195959" },
   { icon: Github, label: "GITHUB", value: "github.com/0utLawzz", href: "https://github.com/0utLawzz" },
 ];
 
@@ -58,7 +57,7 @@ export default function Contact() {
           <h1 className="text-6xl md:text-9xl font-bold text-white uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             CONTACT
           </h1>
-          <div className="w-24 h-[3px] bg-[#FFE600] mt-4" />
+          <div className="w-24 h-[3px] bg-[#FF6A00] mt-4" />
           <p className="text-gray-400 font-mono text-sm mt-4">
             Have something to automate? Let's talk.
           </p>
@@ -80,7 +79,7 @@ export default function Contact() {
                   target={info.href.startsWith("http") ? "_blank" : undefined}
                   rel="noreferrer"
                   data-testid={`link-contact-${info.label.toLowerCase()}`}
-                  className={`flex items-center gap-4 border-[3px] border-black p-6 bg-[#F5F0E8] hover:bg-[#FFE600] hover:text-black transition-colors group ${i > 0 ? "border-t-0" : ""}`}
+                  className={`flex items-center gap-4 border-[3px] border-black p-6 bg-[#F5F0E8] hover:bg-[#FF6A00] hover:text-black transition-colors group ${i > 0 ? "border-t-0" : ""}`}
                 >
                   <div className="border-[3px] border-black p-3 bg-black text-white group-hover:bg-white group-hover:text-black transition-colors">
                     <info.icon size={20} />
@@ -94,13 +93,13 @@ export default function Contact() {
             </div>
 
             {/* Availability */}
-            <div className="mt-8 border-[3px] border-black bg-[#FFE600] p-6">
+            <div className="mt-8 border-[3px] border-black bg-[#FF6A00] p-6">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-3 h-3 bg-[#00FF41] border border-black animate-pulse" />
                 <span className="font-bold text-xs uppercase tracking-widest">AVAILABILITY STATUS</span>
               </div>
               <p className="font-mono text-sm text-black/80">
-                Currently open to new projects and automation consulting. Response time: 24-48 hours.
+                For a clear scope, share the apps involved and the outcome you want. Fiverr is the best place to start a project request.
               </p>
             </div>
           </div>

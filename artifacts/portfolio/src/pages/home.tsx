@@ -6,19 +6,19 @@ import ProjectCard from "@/components/project-card";
 import { useGetFeaturedProjects, useGetGitHubData, getGetGitHubDataQueryKey } from "@workspace/api-client-react";
 
 const services = [
-  { title: "AI Agents", desc: "Autonomous systems that reason, decide, and act on your behalf." },
-  { title: "Workflow Automation", desc: "End-to-end automation pipelines that eliminate manual processes." },
-  { title: "OCR Systems", desc: "Document parsing and extraction pipelines for any document type." },
-  { title: "Internal Business Software", desc: "Custom dashboards and tools built for your specific operations." },
-  { title: "SaaS Platforms", desc: "Full-stack software products from architecture to deployment." },
-  { title: "Custom Integrations", desc: "Connecting your tools, APIs, and data sources into unified systems." },
+  { title: "Python File Automation", desc: "Parse, classify, and organize files with practical scripts and exportable results." },
+  { title: "n8n Workflows", desc: "Connect business apps and automate repeatable steps with clear handover notes." },
+  { title: "Google Sheets & Drive", desc: "Move and organize data between spreadsheets, folders, and connected tools." },
+  { title: "Document Workflows", desc: "Generate and track documents from templates using sanitized sample records." },
+  { title: "Data Export Utilities", desc: "Turn structured inputs into useful CSV, Excel, or Sheets outputs." },
+  { title: "API Integrations", desc: "Connect services around a scoped workflow and agreed data flow." },
 ];
 
 const stats = [
-  { value: "8+", label: "YEARS EXPERIENCE" },
-  { value: "50+", label: "PROJECTS BUILT" },
-  { value: "∞", label: "HOURS AUTOMATED" },
-  { value: "10+", label: "TECH STACKS" },
+  { value: "PYTHON", label: "FILE AUTOMATION" },
+  { value: "n8n", label: "CONNECTED WORKFLOWS" },
+  { value: "SHEETS", label: "GOOGLE WORKSPACE" },
+  { value: "TOOLS", label: "PRACTICAL HANDOVER" },
 ];
 
 const buildSteps = [
@@ -32,7 +32,7 @@ const buildSteps = [
 
 export default function Home() {
   useEffect(() => {
-    document.title = "OUTLAWZ LABS™ | AI Automation Specialist";
+    document.title = "OUTLAWZ AUTOMATION | Workflow Automation";
   }, []);
 
   const { data: dbFeatured, isLoading: dbLoading } = useGetFeaturedProjects();
@@ -91,9 +91,9 @@ export default function Home() {
 
       {/* HERO */}
       <section className="min-h-[90vh] flex flex-col justify-center items-center text-center px-6 py-20 border-b-[3px] border-black relative overflow-hidden bg-black">
-        <div className="absolute top-12 left-6 md:left-16 border-2 border-[#FFE600] text-[#FFE600] px-3 py-1 font-bold text-xs uppercase rotate-[-6deg] shadow-[4px_4px_0_#FFE600]">AUTOMATION</div>
-        <div className="absolute top-32 right-6 md:right-20 border-2 border-[#FFE600] text-[#FFE600] px-3 py-1 font-bold text-xs uppercase rotate-[4deg] shadow-[4px_4px_0_#FFE600]">AI SYSTEMS</div>
-        <div className="absolute bottom-28 left-1/3 border-2 border-[#FFE600] text-[#FFE600] px-3 py-1 font-bold text-xs uppercase rotate-[-2deg] shadow-[4px_4px_0_#FFE600] hidden md:block">SAAS BUILDER</div>
+        <div className="absolute top-12 left-6 md:left-16 border-2 border-[#FF6A00] text-[#FF6A00] px-3 py-1 font-bold text-xs uppercase rotate-[-6deg] shadow-[4px_4px_0_#FF6A00]">AUTOMATION</div>
+        <div className="absolute top-32 right-6 md:right-20 border-2 border-[#FF6A00] text-[#FF6A00] px-3 py-1 font-bold text-xs uppercase rotate-[4deg] shadow-[4px_4px_0_#FF6A00]">DATA WORKFLOWS</div>
+        <div className="absolute bottom-28 left-1/3 border-2 border-[#FF6A00] text-[#FF6A00] px-3 py-1 font-bold text-xs uppercase rotate-[-2deg] shadow-[4px_4px_0_#FF6A00] hidden md:block">PYTHON + n8n</div>
 
         <div className="max-w-5xl">
           <h1
@@ -102,33 +102,41 @@ export default function Home() {
           >
             OUTLAWZ LABS™
           </h1>
-          <div className="inline-block border-[3px] border-[#FFE600] bg-black px-6 py-2 mb-8 shadow-[6px_6px_0_#FFE600]">
-            <span className="text-[#FFE600] font-bold text-xl md:text-3xl uppercase tracking-widest" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-              AI AUTOMATION SPECIALIST
+          <div className="inline-block border-[3px] border-[#FF6A00] bg-black px-6 py-2 mb-8 shadow-[6px_6px_0_#FF6A00]">
+            <span className="text-[#FF6A00] font-bold text-xl md:text-3xl uppercase tracking-widest" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+              WORKFLOW AUTOMATION
             </span>
           </div>
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-12 font-mono leading-relaxed">
-            I Build Automation Systems, AI Workflows &amp; SaaS Products That Eliminate Repetitive Work.
+            I build practical automations that reduce repetitive work and keep business data organized.
           </p>
           <p className="text-sm text-gray-500 max-w-2xl mx-auto mb-12 font-mono">
-            From OCR pipelines and document processing to business software, AI agents, and workflow automation — I design systems that save time and scale operations.
+            Projects include Python file tools, n8n workflows, Google Sheets and Drive automation, and document generation.
           </p>
 
           <div className="flex gap-4 md:gap-6 flex-wrap justify-center">
             <Link
               href="/projects"
               data-testid="button-view-projects"
-              className="bg-[#FFE600] text-black border-[3px] border-white px-8 py-4 text-lg font-bold uppercase tracking-wider shadow-[6px_6px_0_#fff] hover:shadow-[2px_2px_0_#fff] hover:translate-x-1 hover:translate-y-1 transition-all"
+              className="bg-[#FF6A00] text-black border-[3px] border-white px-8 py-4 text-lg font-bold uppercase tracking-wider shadow-[6px_6px_0_#fff] hover:shadow-[2px_2px_0_#fff] hover:translate-x-1 hover:translate-y-1 transition-all"
             >
               VIEW PROJECTS
             </Link>
             <Link
               href="/contact"
               data-testid="button-contact-hero"
-              className="bg-transparent text-white border-[3px] border-white px-8 py-4 text-lg font-bold uppercase tracking-wider shadow-[6px_6px_0_#FFE600] hover:shadow-[2px_2px_0_#FFE600] hover:translate-x-1 hover:translate-y-1 transition-all"
+              className="bg-transparent text-white border-[3px] border-white px-8 py-4 text-lg font-bold uppercase tracking-wider shadow-[6px_6px_0_#FF6A00] hover:shadow-[2px_2px_0_#FF6A00] hover:translate-x-1 hover:translate-y-1 transition-all"
             >
               CONTACT
             </Link>
+            <a
+              href="https://www.fiverr.com/net2nadeem/build-python-n8n-and-google-sheets-workflow-automations"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-[#FF6A00] text-black border-[3px] border-white px-8 py-4 text-lg font-bold uppercase tracking-wider shadow-[6px_6px_0_#fff] hover:shadow-[2px_2px_0_#fff] hover:translate-x-1 hover:translate-y-1 transition-all"
+            >
+              HIRE ON FIVERR
+            </a>
           </div>
         </div>
       </section>
@@ -157,15 +165,15 @@ export default function Home() {
             <h2 className="text-5xl md:text-7xl font-bold text-white uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
               WHAT I BUILD
             </h2>
-            <div className="w-24 h-[3px] bg-[#FFE600] mt-3" />
+            <div className="w-24 h-[3px] bg-[#FF6A00] mt-3" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s) => (
               <div
                 key={s.title}
-                className="border-[3px] border-white bg-black p-6 shadow-[6px_6px_0_#FFE600] hover:shadow-[8px_8px_0_#FFE600] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all"
+                className="border-[3px] border-white bg-black p-6 shadow-[6px_6px_0_#FF6A00] hover:shadow-[8px_8px_0_#FF6A00] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all"
               >
-                <div className="w-2 h-2 bg-[#FFE600] mb-4" />
+                <div className="w-2 h-2 bg-[#FF6A00] mb-4" />
                 <h3 className="text-2xl font-bold text-white uppercase mb-3" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                   {s.title}
                 </h3>
@@ -184,11 +192,11 @@ export default function Home() {
               <h2 className="text-5xl md:text-7xl font-bold text-black uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                 FEATURED PROJECTS
               </h2>
-              <div className="w-24 h-[3px] bg-[#FFE600] mt-3" />
+              <div className="w-24 h-[3px] bg-[#FF6A00] mt-3" />
             </div>
             <Link
               href="/projects"
-              className="hidden md:block border-[3px] border-black px-6 py-3 font-bold uppercase text-sm shadow-[4px_4px_0_#0A0A0A] hover:shadow-[2px_2px_0_#0A0A0A] hover:translate-x-0.5 hover:translate-y-0.5 transition-all bg-[#FFE600] text-black"
+              className="hidden md:block border-[3px] border-black px-6 py-3 font-bold uppercase text-sm shadow-[4px_4px_0_#0A0A0A] hover:shadow-[2px_2px_0_#0A0A0A] hover:translate-x-0.5 hover:translate-y-0.5 transition-all bg-[#FF6A00] text-black"
             >
               ALL PROJECTS
             </Link>
@@ -215,7 +223,7 @@ export default function Home() {
           <div className="mt-8 md:hidden">
             <Link
               href="/projects"
-              className="block border-[3px] border-black px-6 py-3 font-bold uppercase text-sm shadow-[4px_4px_0_#0A0A0A] bg-[#FFE600] text-black text-center"
+              className="block border-[3px] border-black px-6 py-3 font-bold uppercase text-sm shadow-[4px_4px_0_#0A0A0A] bg-[#FF6A00] text-black text-center"
             >
               ALL PROJECTS
             </Link>
@@ -230,7 +238,7 @@ export default function Home() {
             <h2 className="text-5xl md:text-7xl font-bold text-white uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
               BUILD PROCESS
             </h2>
-            <div className="w-24 h-[3px] bg-[#FFE600] mt-3" />
+            <div className="w-24 h-[3px] bg-[#FF6A00] mt-3" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
             {buildSteps.map((step, idx) => (
@@ -238,7 +246,7 @@ export default function Home() {
                 key={step.n}
                 className={`border-[3px] border-white p-6 ${idx % 3 !== 2 ? "border-r-0" : ""} ${idx >= 3 ? "border-t-0" : ""}`}
               >
-                <div className="text-[#FFE600] text-4xl font-bold mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                <div className="text-[#FF6A00] text-4xl font-bold mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                   {step.n}
                 </div>
                 <h3 className="text-xl font-bold text-white uppercase mb-2" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
@@ -264,7 +272,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-6 bg-[#FFE600] border-b-[3px] border-black text-center">
+      <section className="py-24 px-6 bg-[#FF6A00] border-b-[3px] border-black text-center">
         <h2 className="text-5xl md:text-8xl font-bold text-black uppercase mb-6" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
           LET'S BUILD SOMETHING
         </h2>

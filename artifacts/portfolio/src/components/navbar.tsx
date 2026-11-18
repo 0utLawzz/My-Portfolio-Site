@@ -20,7 +20,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         <Link
           href="/"
-          className="font-display text-3xl md:text-4xl text-white tracking-wide hover:text-[#FFE600] transition-colors"
+          className="font-display text-3xl md:text-4xl text-white tracking-wide hover:text-[#FF6A00] transition-colors"
           style={{ fontFamily: "'Bebas Neue', sans-serif" }}
         >
           OUTLAWZ LABS™
@@ -34,8 +34,8 @@ export default function Navbar() {
               href={l.href}
               className={`px-3 py-2 text-sm font-bold uppercase tracking-wider transition-colors border-2 ${
                 location === l.href
-                  ? "bg-[#FFE600] text-black border-[#FFE600]"
-                  : "text-white border-transparent hover:border-white hover:text-[#FFE600]"
+                  ? "bg-[#FF6A00] text-black border-[#FF6A00]"
+                  : "text-white border-transparent hover:border-white hover:text-[#FF6A00]"
               }`}
               data-testid={`nav-${l.label.toLowerCase()}`}
             >
@@ -70,8 +70,8 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className={`block px-6 py-4 font-bold uppercase text-lg border-b-2 border-gray-800 transition-colors ${
                 location === l.href
-                  ? "bg-[#FFE600] text-black"
-                  : "text-white hover:text-[#FFE600]"
+                  ? "bg-[#FF6A00] text-black"
+                  : "text-white hover:text-[#FF6A00]"
               }`}
             >
               {l.label}

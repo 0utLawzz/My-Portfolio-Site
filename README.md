@@ -16,19 +16,19 @@
 
 ## Social preview
 
-Repo social card (1280×640, black / `#FFE600`):
+Repo social card (1280×640, black / `#FF6A00`):
 
 - Vector: [`social-preview.svg`](./social-preview.svg)
 - For **GitHub → Settings → Social preview**, upload a PNG export of the same art (or use the SVG in the README).
 
 ## Features
 
-- **Auto GitHub catalog** — all public repos (hide with topic `portfolio-hide` or make private)
+- **Auto GitHub catalog** — public repos excluding internal client-management and workflow repositories
 - **Case studies** — Overview, Problem, Solution, tech stack in PostgreSQL (Neon)
 - **Featured projects** — recent repos + DB-enriched detail pages
 - **API** — `/api/github`, `/api/projects`, `/api/projects/featured`, `/api/projects/by-slug/:slug`
-- **Admin** — password-protected project editing (default local: `outlawz2025`)
-- **Design** — black / `#FFE600` neo-brutalism (Space Mono + Bebas Neue)
+- **Admin** — password-protected project editing; set `ADMIN_PASSWORD` and `SESSION_SECRET` in the API environment before starting it
+- **Design** — black / `#FF6A00` neo-brutalism (Space Mono + Bebas Neue)
 
 ## Monorepo layout
 
@@ -81,6 +81,8 @@ pnpm --filter @workspace/portfolio build
 | `DATABASE_URL` | Neon Postgres connection string (**required**) |
 | `GITHUB_TOKEN` | Higher rate limits for repo list |
 | `GITHUB_USERNAME` | Default `0utLawzz` |
+| `ADMIN_PASSWORD` | Required, unique admin password |
+| `SESSION_SECRET` | Required, long random session signing secret |
 
 ## Vercel settings (portfolio)
 

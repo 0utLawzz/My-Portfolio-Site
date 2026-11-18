@@ -65,9 +65,9 @@ export default function GitHubPage() {
             <h1 className="text-6xl md:text-9xl font-bold text-white uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
               GITHUB
             </h1>
-            <div className="w-24 h-[3px] bg-[#FFE600] mt-4" />
+            <div className="w-24 h-[3px] bg-[#FF6A00] mt-4" />
             <p className="text-gray-400 font-mono text-sm mt-4">
-              Live from <a href="https://github.com/0utLawzz" target="_blank" rel="noreferrer" className="text-[#FFE600] hover:underline">github.com/0utLawzz</a>
+              Live from <a href="https://github.com/0utLawzz" target="_blank" rel="noreferrer" className="text-[#FF6A00] hover:underline">github.com/0utLawzz</a>
             </p>
           </div>
 
@@ -91,7 +91,7 @@ export default function GitHubPage() {
                 target="_blank"
                 rel="noreferrer"
                 data-testid="link-github-profile"
-                className="border-[3px] border-[#FFE600] bg-[#FFE600] text-black px-6 py-4 flex flex-col items-center justify-center hover:bg-transparent hover:text-[#FFE600] transition-colors border-l-0"
+                className="border-[3px] border-[#FF6A00] bg-[#FF6A00] text-black px-6 py-4 flex flex-col items-center justify-center hover:bg-transparent hover:text-[#FF6A00] transition-colors border-l-0"
               >
                 <Github size={20} />
                 <span className="text-xs font-bold uppercase mt-1">PROFILE</span>
@@ -110,7 +110,7 @@ export default function GitHubPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="SEARCH REPOS..."
-            className="border-[3px] border-black px-4 py-3 font-mono text-sm uppercase bg-white focus:outline-none focus:bg-[#FFE600] transition-colors w-full lg:w-72"
+            className="border-[3px] border-black px-4 py-3 font-mono text-sm uppercase bg-white focus:outline-none focus:bg-[#FF6A00] transition-colors w-full lg:w-72"
             data-testid="input-search-repos"
           />
 
@@ -121,10 +121,10 @@ export default function GitHubPage() {
                 key={lang}
                 onClick={() => setLangFilter(lang)}
                 data-testid={`button-lang-${lang.toLowerCase()}`}
-                style={langFilter === lang && lang !== "All" ? { backgroundColor: languageColors[lang] ?? "#FFE600", color: "#000" } : {}}
+                style={langFilter === lang && lang !== "All" ? { backgroundColor: languageColors[lang] ?? "#FF6A00", color: "#000" } : {}}
                 className={`px-3 py-3 text-xs font-bold uppercase border-[3px] border-black border-r-0 last:border-r-[3px] transition-colors whitespace-nowrap ${
                   langFilter === lang
-                    ? lang === "All" ? "bg-[#FFE600] text-black" : "text-black"
+                    ? lang === "All" ? "bg-[#FF6A00] text-black" : "text-black"
                     : "bg-white text-black hover:bg-black hover:text-white"
                 }`}
               >
@@ -187,7 +187,7 @@ export default function GitHubPage() {
                       target="_blank"
                       rel="noreferrer"
                       data-testid={`card-repo-${repo.id}`}
-                      className="border-[3px] border-black bg-white shadow-[4px_4px_0_#0A0A0A] hover:shadow-[6px_6px_0_#FFE600] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all flex flex-col group"
+                      className="border-[3px] border-black bg-white shadow-[4px_4px_0_#0A0A0A] hover:shadow-[6px_6px_0_#FF6A00] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all flex flex-col group"
                     >
                       {/* Top bar with language color */}
                       <div className="h-1.5" style={{ backgroundColor: repo.language ? langColor : "#E0D9CD" }} />

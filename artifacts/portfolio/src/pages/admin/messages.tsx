@@ -47,7 +47,7 @@ export default function AdminMessages() {
           <h1 className="text-5xl font-bold text-black uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             MESSAGES
           </h1>
-          <div className="w-16 h-[3px] bg-[#FFE600] mt-2" />
+          <div className="w-16 h-[3px] bg-[#FF6A00] mt-2" />
         </div>
 
         {isLoading ? (
@@ -90,7 +90,7 @@ export default function AdminMessages() {
                     </button>
                   </div>
                 </div>
-                <div className="border-l-[3px] border-[#FFE600] pl-4">
+                <div className="border-l-[3px] border-[#FF6A00] pl-4">
                   <p className="font-mono text-sm text-gray-700 leading-relaxed">{msg.message}</p>
                 </div>
                 <div className="mt-3">

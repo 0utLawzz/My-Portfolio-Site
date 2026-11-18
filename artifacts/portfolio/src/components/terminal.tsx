@@ -43,7 +43,7 @@ export default function Terminal() {
     <div className="bg-black border-[3px] border-[#00FF41] shadow-[6px_6px_0_#00FF41] p-6 font-mono">
       <div className="flex gap-2 mb-4 border-b border-[#00FF41]/30 pb-3">
         <div className="w-3 h-3 bg-[#FF2D20] border border-[#FF2D20]" />
-        <div className="w-3 h-3 bg-[#FFE600] border border-[#FFE600]" />
+        <div className="w-3 h-3 bg-[#FF6A00] border border-[#FF6A00]" />
         <div className="w-3 h-3 bg-[#00FF41] border border-[#00FF41]" />
         <span className="ml-2 text-[#00FF41]/60 text-xs">outlawz-labs — bash</span>
       </div>
