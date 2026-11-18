@@ -183,7 +183,7 @@ export default function Projects() {
           <h1 className="text-6xl md:text-9xl font-bold text-white uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             PROJECTS
           </h1>
-          <div className="w-24 h-[3px] bg-[#FFE600] mt-4" />
+          <div className="w-24 h-[3px] bg-[#FF6A00] mt-4" />
           <p className="text-gray-400 font-mono text-sm mt-4">
             All public repos — auto-synced from GitHub. Featured ones have full case studies.
           </p>
@@ -198,12 +198,12 @@ export default function Projects() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="SEARCH PROJECTS..."
-              className="flex-1 border-[3px] border-black border-r-0 px-4 py-3 font-mono text-sm uppercase bg-white focus:outline-none focus:bg-[#FFE600] transition-colors"
+              className="flex-1 border-[3px] border-black border-r-0 px-4 py-3 font-mono text-sm uppercase bg-white focus:outline-none focus:bg-[#FF6A00] transition-colors"
               data-testid="input-search-projects"
             />
             <button
               type="submit"
-              className="border-[3px] border-black px-4 py-3 bg-black text-white hover:bg-[#FFE600] hover:text-black transition-colors"
+              className="border-[3px] border-black px-4 py-3 bg-black text-white hover:bg-[#FF6A00] hover:text-black transition-colors"
             >
               <Search size={18} />
             </button>
@@ -216,7 +216,7 @@ export default function Projects() {
                 data-testid={`button-filter-${cat.toLowerCase().replace(" ", "-")}`}
                 className={`px-4 py-3 text-xs font-bold uppercase border-[3px] border-black border-r-0 last:border-r-[3px] transition-colors ${
                   category === cat
-                    ? "bg-[#FFE600] text-black"
+                    ? "bg-[#FF6A00] text-black"
                     : "bg-white text-black hover:bg-black hover:text-white"
                 }`}
               >
