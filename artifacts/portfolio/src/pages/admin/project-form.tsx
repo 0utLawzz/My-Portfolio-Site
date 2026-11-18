@@ -145,7 +145,7 @@ export default function AdminProjectForm() {
           <h1 className="text-5xl font-bold text-black uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             {isEdit ? "EDIT PROJECT" : "NEW PROJECT"}
           </h1>
-          <div className="w-16 h-[3px] bg-[#FFE600] mt-2" />
+          <div className="w-16 h-[3px] bg-[#FF6A00] mt-2" />
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -215,7 +215,7 @@ export default function AdminProjectForm() {
                 type="button"
                 onClick={() => setValue("featured", !featured)}
                 data-testid="button-toggle-featured"
-                className={`border-[3px] border-black px-6 py-3 font-bold uppercase text-sm transition-colors ${featured ? "bg-[#FFE600] text-black" : "bg-white text-black hover:bg-gray-100"}`}
+                className={`border-[3px] border-black px-6 py-3 font-bold uppercase text-sm transition-colors ${featured ? "bg-[#FF6A00] text-black" : "bg-white text-black hover:bg-gray-100"}`}
               >
                 {featured ? "FEATURED: ON" : "FEATURED: OFF"}
               </button>
@@ -250,7 +250,7 @@ export default function AdminProjectForm() {
               type="submit"
               disabled={isPending}
               data-testid="button-save-project"
-              className="flex-1 border-[3px] border-black bg-[#FFE600] text-black py-4 font-bold uppercase text-sm tracking-widest shadow-[4px_4px_0_#0A0A0A] hover:shadow-[2px_2px_0_#0A0A0A] hover:translate-x-0.5 hover:translate-y-0.5 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex-1 border-[3px] border-black bg-[#FF6A00] text-black py-4 font-bold uppercase text-sm tracking-widest shadow-[4px_4px_0_#0A0A0A] hover:shadow-[2px_2px_0_#0A0A0A] hover:translate-x-0.5 hover:translate-y-0.5 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isPending ? "SAVING..." : isEdit ? "UPDATE PROJECT" : "CREATE PROJECT"}
             </button>
