@@ -7,6 +7,11 @@ import { logger } from "./lib/logger";
 
 const app: Express = express();
 
+const sessionSecret = process.env.SESSION_SECRET;
+if (!sessionSecret) {
+  throw new Error("SESSION_SECRET must be configured before starting the API");
+}
+
 app.set("trust proxy", 1);
 
 app.use(
@@ -34,7 +39,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   session({
-    secret: process.env.SESSION_SECRET ?? "outlawz-labs-secret",
+    secret: sessionSecret,
     resave: false,
     saveUninitialized: false,
     cookie: {
