@@ -49,7 +49,7 @@ export default function Experience() {
           <h1 className="text-6xl md:text-9xl font-bold text-white uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             EXPERIENCE
           </h1>
-          <div className="w-24 h-[3px] bg-[#FFE600] mt-4" />
+          <div className="w-24 h-[3px] bg-[#FF6A00] mt-4" />
           <p className="text-gray-400 font-mono text-sm mt-4">
             8+ years of building systems that actually work.
           </p>
@@ -63,9 +63,9 @@ export default function Experience() {
             {timeline.map((item, i) => (
               <div key={item.year} className={`flex border-[3px] border-black ${i > 0 ? "border-t-0" : ""} group`}>
                 {/* Year column */}
-                <div className="w-28 md:w-40 bg-black flex-shrink-0 flex flex-col justify-center items-center py-8 px-4 border-r-[3px] border-white group-hover:bg-[#FFE600] group-hover:border-[#FFE600] transition-colors">
+                <div className="w-28 md:w-40 bg-black flex-shrink-0 flex flex-col justify-center items-center py-8 px-4 border-r-[3px] border-white group-hover:bg-[#FF6A00] group-hover:border-[#FF6A00] transition-colors">
                   <span
-                    className="text-[#FFE600] text-3xl md:text-5xl font-bold group-hover:text-black transition-colors"
+                    className="text-[#FF6A00] text-3xl md:text-5xl font-bold group-hover:text-black transition-colors"
                     style={{ fontFamily: "'Bebas Neue', sans-serif" }}
                   >
                     {item.year}
@@ -94,7 +94,7 @@ export default function Experience() {
           </div>
 
           {/* Future indicator */}
-          <div className="mt-6 border-[3px] border-dashed border-black p-8 text-center bg-[#FFE600]">
+          <div className="mt-6 border-[3px] border-dashed border-black p-8 text-center bg-[#FF6A00]">
             <p className="font-display text-2xl font-bold text-black uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
               THE NEXT CHAPTER IS BEING BUILT RIGHT NOW
             </p>
