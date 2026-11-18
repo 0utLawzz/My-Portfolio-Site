@@ -19,7 +19,7 @@ interface Props {
 }
 
 const categoryColors: Record<string, string> = {
-  Automation: "#FFE600",
+  Automation: "#FF6A00",
   AI: "#00FF41",
   SaaS: "#0066FF",
   OCR: "#FF2D20",
@@ -28,11 +28,11 @@ const categoryColors: Record<string, string> = {
 };
 
 export default function ProjectCard({ project, showFeaturedBadge }: Props) {
-  const catColor = categoryColors[project.category ?? ""] ?? "#FFE600";
+  const catColor = categoryColors[project.category ?? ""] ?? "#FF6A00";
 
   return (
     <Link href={`/projects/${project.slug}`} data-testid={`card-project-${project.id}`}>
-      <div className="border-[3px] border-black bg-[#F5F0E8] shadow-[6px_6px_0_#0A0A0A] hover:shadow-[8px_8px_0_#FFE600] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all cursor-pointer group">
+      <div className="border-[3px] border-black bg-[#F5F0E8] shadow-[6px_6px_0_#0A0A0A] hover:shadow-[8px_8px_0_#FF6A00] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all cursor-pointer group">
         {(() => {
           let img = project.cover_image || null;
           if (!img && project.slug) {
@@ -57,10 +57,10 @@ export default function ProjectCard({ project, showFeaturedBadge }: Props) {
                 className="absolute inset-0 opacity-25"
                 style={{
                   backgroundImage:
-                    "linear-gradient(135deg, #FFE600 0%, transparent 35%, #FFE600 100%)",
+                    "linear-gradient(135deg, #FF6A00 0%, transparent 35%, #FF6A00 100%)",
                 }}
               />
-              <span className="font-mono text-[#FFE600] text-lg uppercase tracking-widest relative z-10">
+              <span className="font-mono text-[#FF6A00] text-lg uppercase tracking-widest relative z-10">
                 {project.category ?? "PROJECT"}
               </span>
             </div>
@@ -79,7 +79,7 @@ export default function ProjectCard({ project, showFeaturedBadge }: Props) {
                 </span>
               )}
               {showFeaturedBadge && project.featured && (
-                <span className="px-2 py-0.5 border-2 border-black bg-[#FFE600] text-xs font-bold uppercase">
+                <span className="px-2 py-0.5 border-2 border-black bg-[#FF6A00] text-xs font-bold uppercase">
                   FEATURED
                 </span>
               )}
@@ -89,7 +89,7 @@ export default function ProjectCard({ project, showFeaturedBadge }: Props) {
                 project.status === "active"
                   ? "bg-[#00FF41] text-black"
                   : project.status === "wip"
-                  ? "bg-[#FFE600] text-black"
+                  ? "bg-[#FF6A00] text-black"
                   : "bg-gray-300 text-black"
               }`}
             >
