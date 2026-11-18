@@ -28,7 +28,7 @@ function AdminLayout({ children }: { children: React.ReactNode }) {
 
   if (isLoading) return (
     <div className="min-h-screen bg-black flex items-center justify-center">
-      <span className="text-[#FFE600] font-mono">Loading...</span>
+      <span className="text-[#FF6A00] font-mono">Loading...</span>
     </div>
   );
 
@@ -41,17 +41,17 @@ function AdminLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-[#F5F0E8]" style={{ fontFamily: "'Space Mono', monospace" }}>
       {/* Admin top bar */}
-      <header className="bg-black border-b-[3px] border-[#FFE600] py-4 px-6 flex justify-between items-center sticky top-0 z-50">
+      <header className="bg-black border-b-[3px] border-[#FF6A00] py-4 px-6 flex justify-between items-center sticky top-0 z-50">
         <div className="flex items-center gap-6">
           <span className="text-white font-bold text-xl" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-            OUTLAWZ LABS™ <span className="text-[#FFE600]">ADMIN</span>
+            OUTLAWZ LABS™ <span className="text-[#FF6A00]">ADMIN</span>
           </span>
           <nav className="hidden md:flex gap-1">
             {navLinks.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
-                className="px-3 py-1 text-xs font-bold uppercase text-gray-400 border border-gray-700 hover:border-[#FFE600] hover:text-[#FFE600] transition-colors"
+                className="px-3 py-1 text-xs font-bold uppercase text-gray-400 border border-gray-700 hover:border-[#FF6A00] hover:text-[#FF6A00] transition-colors"
               >
                 {l.label}
               </Link>
@@ -87,7 +87,7 @@ export default function AdminDashboard() {
   });
 
   const statCards = [
-    { icon: FolderOpen, label: "TOTAL PROJECTS", value: stats?.totalProjects ?? 0, color: "#FFE600" },
+    { icon: FolderOpen, label: "TOTAL PROJECTS", value: stats?.totalProjects ?? 0, color: "#FF6A00" },
     { icon: Star, label: "FEATURED", value: stats?.featuredProjects ?? 0, color: "#00FF41" },
     { icon: MessageSquare, label: "MESSAGES", value: stats?.totalMessages ?? 0, color: "#0066FF" },
     { icon: Users, label: "UNREAD", value: stats?.unreadMessages ?? 0, color: "#FF2D20" },
@@ -101,12 +101,12 @@ export default function AdminDashboard() {
             <h1 className="text-5xl font-bold text-black uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
               DASHBOARD
             </h1>
-            <div className="w-16 h-[3px] bg-[#FFE600] mt-2" />
+            <div className="w-16 h-[3px] bg-[#FF6A00] mt-2" />
           </div>
           <Link
             href="/admin/projects/new"
             data-testid="button-new-project"
-            className="border-[3px] border-black bg-[#FFE600] text-black px-6 py-3 font-bold uppercase text-sm shadow-[4px_4px_0_#0A0A0A] hover:shadow-[2px_2px_0_#0A0A0A] hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
+            className="border-[3px] border-black bg-[#FF6A00] text-black px-6 py-3 font-bold uppercase text-sm shadow-[4px_4px_0_#0A0A0A] hover:shadow-[2px_2px_0_#0A0A0A] hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
           >
             + NEW PROJECT
           </Link>
@@ -140,7 +140,7 @@ export default function AdminDashboard() {
                   <span className="w-32 font-bold text-xs uppercase text-gray-600">{cat.category}</span>
                   <div className="flex-1 border-[2px] border-black h-8 bg-gray-100 relative overflow-hidden">
                     <div
-                      className="h-full bg-[#FFE600] border-r-[2px] border-black"
+                      className="h-full bg-[#FF6A00] border-r-[2px] border-black"
                       style={{ width: `${Math.min((cat.count / (stats.totalProjects || 1)) * 100, 100)}%` }}
                     />
                   </div>
@@ -161,9 +161,9 @@ export default function AdminDashboard() {
             <Link
               key={item.href}
               href={item.href}
-              className="border-[3px] border-black p-6 bg-black text-white shadow-[4px_4px_0_#FFE600] hover:shadow-[6px_6px_0_#FFE600] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all group"
+              className="border-[3px] border-black p-6 bg-black text-white shadow-[4px_4px_0_#FF6A00] hover:shadow-[6px_6px_0_#FF6A00] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all group"
             >
-              <h3 className="text-xl font-bold uppercase mb-2 group-hover:text-[#FFE600] transition-colors" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+              <h3 className="text-xl font-bold uppercase mb-2 group-hover:text-[#FF6A00] transition-colors" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                 {item.label}
               </h3>
               <p className="text-xs font-mono text-gray-400">{item.desc}</p>
