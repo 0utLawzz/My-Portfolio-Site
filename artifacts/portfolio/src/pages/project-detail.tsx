@@ -84,7 +84,7 @@ function RepoInfoBox({ githubUrl }: { githubUrl: string }) {
   return (
     <div className="border-[3px] border-black bg-white overflow-hidden">
       <div className="bg-black px-5 py-3 flex items-center justify-between">
-        <h3 className="text-lg font-bold text-[#FFE600] uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+        <h3 className="text-lg font-bold text-[#FF6A00] uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
           REPO INFO
         </h3>
         <a href={info.html_url} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors" title="View on GitHub">
@@ -162,7 +162,7 @@ function RepoInfoBox({ githubUrl }: { githubUrl: string }) {
                   key={lang.name}
                   style={{
                     width: `${lang.percent}%`,
-                    backgroundColor: i === 0 ? "#FFE600" : i === 1 ? "#00FF41" : "#000",
+                    backgroundColor: i === 0 ? "#FF6A00" : i === 1 ? "#00FF41" : "#000",
                   }}
                   title={`${lang.name} ${lang.percent}%`}
                 />
@@ -173,7 +173,7 @@ function RepoInfoBox({ githubUrl }: { githubUrl: string }) {
                 <span key={lang.name} className="font-mono text-[10px] text-gray-700">
                   <span
                     className="inline-block w-2 h-2 mr-1 border border-black"
-                    style={{ backgroundColor: i === 0 ? "#FFE600" : i === 1 ? "#00FF41" : "#000" }}
+                    style={{ backgroundColor: i === 0 ? "#FF6A00" : i === 1 ? "#00FF41" : "#000" }}
                   />
                   {lang.name} {lang.percent}%
                 </span>
@@ -262,19 +262,19 @@ export default function ProjectDetail() {
         <div className="border-[3px] border-black bg-[#F5F0E8] p-8 mb-6 shadow-[6px_6px_0_#0A0A0A]">
           <div className="flex flex-wrap gap-2 mb-4">
             {project.category && (
-              <span className="px-3 py-1 border-[2px] border-black bg-[#FFE600] text-black font-bold text-xs uppercase">
+              <span className="px-3 py-1 border-[2px] border-black bg-[#FF6A00] text-black font-bold text-xs uppercase">
                 {project.category}
               </span>
             )}
             <span className={`px-3 py-1 border-[2px] border-black font-bold text-xs uppercase ${
               project.status === "active" ? "bg-[#00FF41] text-black" :
-              project.status === "wip" ? "bg-[#FFE600] text-black" :
+              project.status === "wip" ? "bg-[#FF6A00] text-black" :
               "bg-gray-300 text-black"
             }`}>
               {project.status}
             </span>
             {project.featured && (
-              <span className="px-3 py-1 border-[2px] border-black bg-black text-[#FFE600] font-bold text-xs uppercase">
+              <span className="px-3 py-1 border-[2px] border-black bg-black text-[#FF6A00] font-bold text-xs uppercase">
                 FEATURED
               </span>
             )}
@@ -291,7 +291,7 @@ export default function ProjectDetail() {
                 target="_blank"
                 rel="noreferrer"
                 data-testid="link-github"
-                className="flex items-center gap-2 border-[3px] border-black px-5 py-3 font-bold uppercase text-sm bg-black text-white hover:bg-[#FFE600] hover:text-black transition-colors"
+                className="flex items-center gap-2 border-[3px] border-black px-5 py-3 font-bold uppercase text-sm bg-black text-white hover:bg-[#FF6A00] hover:text-black transition-colors"
               >
                 <Github size={14} />
                 GITHUB
@@ -303,7 +303,7 @@ export default function ProjectDetail() {
                 target="_blank"
                 rel="noreferrer"
                 data-testid="link-live"
-                className="flex items-center gap-2 border-[3px] border-black px-5 py-3 font-bold uppercase text-sm bg-[#FFE600] text-black hover:bg-black hover:text-white transition-colors"
+                className="flex items-center gap-2 border-[3px] border-black px-5 py-3 font-bold uppercase text-sm bg-[#FF6A00] text-black hover:bg-black hover:text-white transition-colors"
               >
                 <ExternalLink size={14} />
                 LIVE DEMO
@@ -327,7 +327,7 @@ export default function ProjectDetail() {
               </div>
             )}
             {project.solution && (
-              <div className="border-[3px] border-black bg-[#FFE600] p-6">
+              <div className="border-[3px] border-black bg-[#FF6A00] p-6">
                 <h2 className="text-2xl font-bold uppercase mb-4 border-b-[3px] border-black pb-3" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>THE SOLUTION</h2>
                 <p className="font-mono text-sm text-black/80 leading-relaxed">{project.solution}</p>
               </div>
@@ -342,7 +342,7 @@ export default function ProjectDetail() {
                 <h3 className="text-xl font-bold text-white uppercase mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>TECH STACK</h3>
                 <div className="flex flex-wrap gap-2">
                   {project.tech_stack.map((t) => (
-                    <span key={t} className="border-2 border-[#FFE600] text-[#FFE600] px-2 py-1 text-xs font-mono uppercase">
+                    <span key={t} className="border-2 border-[#FF6A00] text-[#FF6A00] px-2 py-1 text-xs font-mono uppercase">
                       {t}
                     </span>
                   ))}
