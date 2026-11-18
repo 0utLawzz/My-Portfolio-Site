@@ -2,31 +2,31 @@ import { useEffect } from "react";
 import Navbar from "@/components/navbar";
 
 const skills = [
-  "Python", "Node.js", "TypeScript", "React", "Next.js", "Supabase",
-  "PostgreSQL", "OpenAI", "Claude", "Gemini", "GitHub Actions", "Docker",
-  "Automation", "OCR", "Web Scraping", "Workflow Design",
+  "Python", "n8n", "Google Sheets", "Google Apps Script", "Google Drive",
+  "JavaScript", "TypeScript", "React", "PostgreSQL", "GitHub",
+  "API Integration", "File Processing", "Workflow Design", "Data Export",
 ];
 
 const story = [
   {
-    period: "THE START",
-    text: "Started as a developer in 2017, building web applications and learning the full stack. Realized early on that the real leverage wasn't in writing more code — it was in making systems work automatically.",
+    period: "FOCUS",
+    text: "OutLawZ Automation builds practical tools that reduce repetitive work and keep business data organized.",
   },
   {
-    period: "THE SHIFT",
-    text: "Moved into automation in 2019. Built my first serious workflow automation for a logistics company, cutting hours of manual data entry to minutes. That was the moment everything changed.",
+    period: "PROJECTS",
+    text: "Examples include Python file parsing and exports, Apps Script document generation, spreadsheet workflows, and browser utilities.",
   },
   {
-    period: "GOING DEEPER",
-    text: "Expanded into OCR systems, internal dashboards, and process automation for businesses across multiple industries. Each project added tools to the arsenal and sharpened the systems thinking.",
+    period: "APPROACH",
+    text: "I clarify the desired outcome, map inputs and outputs, build the agreed workflow, and provide clear setup notes.",
   },
   {
-    period: "AI ERA",
-    text: "When AI became viable as an engineering primitive, not just a research topic, everything accelerated. Combined AI with automation to build agents, pipelines, and SaaS products that operate at a different level.",
+    period: "DATA CARE",
+    text: "Portfolio examples use fictional or sanitized data. Each project is scoped around the client's tools and requirements.",
   },
   {
     period: "NOW",
-    text: "Focused on building serious automation infrastructure — AI workflows, OCR systems, business software, and SaaS platforms. Not a freelancer. A systems architect who builds things that actually run.",
+    text: "Available for scoped automation projects through Fiverr. Share the apps involved and the repetitive task you want to simplify.",
   },
 ];
 
@@ -41,10 +41,10 @@ export default function About() {
 
       {/* Header */}
       <section className="bg-black border-b-[3px] border-white py-20 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: "linear-gradient(90deg,#FFE600 1px,transparent 1px),linear-gradient(#FFE600 1px,transparent 1px)", backgroundSize: "40px 40px" }} />
+        <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: "linear-gradient(90deg,#FF6A00 1px,transparent 1px),linear-gradient(#FF6A00 1px,transparent 1px)", backgroundSize: "40px 40px" }} />
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center gap-10 relative z-10">
           <div className="shrink-0">
-            <div className="border-[3px] border-[#FFE600] p-2 bg-black shadow-[6px_6px_0_#FFE600]">
+            <div className="border-[3px] border-[#FF6A00] p-2 bg-black shadow-[6px_6px_0_#FF6A00]">
               <img src="/outlawz-logo.png" alt="OutLawZ logo" className="w-36 h-36 md:w-44 md:h-44 object-contain" />
             </div>
           </div>
@@ -52,9 +52,9 @@ export default function About() {
             <h1 className="text-6xl md:text-9xl font-bold text-white uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
               ABOUT
             </h1>
-            <div className="w-24 h-[3px] bg-[#FFE600] mt-4" />
+            <div className="w-24 h-[3px] bg-[#FF6A00] mt-4" />
             <p className="text-gray-400 font-mono text-sm mt-4 max-w-xl">
-              AI Automation Specialist. Systems Architect. SaaS Builder. 8+ years of building things that work.
+              Practical automation for files, spreadsheets, documents, and everyday business workflows.
             </p>
           </div>
         </div>
@@ -64,12 +64,12 @@ export default function About() {
       <section className="py-20 px-6 border-b-[3px] border-black">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-black uppercase mb-12" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-            THE STORY
+            HOW I WORK
           </h2>
           <div className="space-y-0">
             {story.map((s, i) => (
               <div key={s.period} className={`flex flex-col md:flex-row border-[3px] border-black ${i > 0 ? "border-t-0" : ""}`}>
-                <div className="md:w-48 bg-black text-[#FFE600] px-6 py-6 font-bold text-sm uppercase tracking-widest flex items-center border-b-[3px] md:border-b-0 md:border-r-[3px] border-white" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                <div className="md:w-48 bg-black text-[#FF6A00] px-6 py-6 font-bold text-sm uppercase tracking-widest flex items-center border-b-[3px] md:border-b-0 md:border-r-[3px] border-white" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                   {s.period}
                 </div>
                 <div className="flex-1 p-6 bg-[#F5F0E8]">
@@ -91,7 +91,7 @@ export default function About() {
             {skills.map((skill, i) => (
               <div
                 key={skill}
-                className={`border-[3px] border-white px-6 py-4 font-bold uppercase text-sm hover:bg-[#FFE600] hover:text-black hover:border-[#FFE600] transition-colors cursor-default text-white ${
+                className={`border-[3px] border-white px-6 py-4 font-bold uppercase text-sm hover:bg-[#FF6A00] hover:text-black hover:border-[#FF6A00] transition-colors cursor-default text-white ${
                   i % 4 !== 3 ? "border-r-0" : ""
                 } ${i >= 4 ? "border-t-0" : ""}`}
               >
@@ -103,7 +103,7 @@ export default function About() {
       </section>
 
       {/* Philosophy */}
-      <section className="py-20 px-6 bg-[#FFE600] border-b-[3px] border-black">
+      <section className="py-20 px-6 bg-[#FF6A00] border-b-[3px] border-black">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-bold text-black uppercase mb-8" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             THE PHILOSOPHY
