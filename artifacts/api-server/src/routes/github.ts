@@ -6,6 +6,13 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const router: IRouter = Router();
 
 const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+const HIDDEN_REPOSITORIES = new Set([
+  "Brandex-Client-Ledger",
+  "Brandex-Workflow",
+  "Brandex-IP-Docket",
+  "Brandex-LedgerFlow",
+  "Brandex-Tax-NTN",
+]);
 let cache: { data: unknown; ts: number } | null = null;
 
 router.get("/github", async (req, res): Promise<void> => {
@@ -46,7 +53,7 @@ router.get("/github", async (req, res): Promise<void> => {
     const allRepos = await reposRes.json();
 
     const repos = (allRepos as Array<Record<string, unknown>>)
-      .filter((r) => !r.fork)
+      .filter((r) => !r.fork && !HIDDEN_REPOSITORIES.has(String(r.name)))
       .map((r) => ({
         id: r.id,
         name: r.name,
