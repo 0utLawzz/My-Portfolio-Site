@@ -92,8 +92,8 @@ export default function Home() {
       {/* HERO */}
       <section className="min-h-[90vh] flex flex-col justify-center items-center text-center px-6 py-20 border-b-[3px] border-black relative overflow-hidden bg-black">
         <div className="absolute top-12 left-6 md:left-16 border-2 border-[#FF6A00] text-[#FF6A00] px-3 py-1 font-bold text-xs uppercase rotate-[-6deg] shadow-[4px_4px_0_#FF6A00]">AUTOMATION</div>
-        <div className="absolute top-32 right-6 md:right-20 border-2 border-[#FF6A00] text-[#FF6A00] px-3 py-1 font-bold text-xs uppercase rotate-[4deg] shadow-[4px_4px_0_#FF6A00]">AI SYSTEMS</div>
-        <div className="absolute bottom-28 left-1/3 border-2 border-[#FF6A00] text-[#FF6A00] px-3 py-1 font-bold text-xs uppercase rotate-[-2deg] shadow-[4px_4px_0_#FF6A00] hidden md:block">SAAS BUILDER</div>
+        <div className="absolute top-32 right-6 md:right-20 border-2 border-[#FF6A00] text-[#FF6A00] px-3 py-1 font-bold text-xs uppercase rotate-[4deg] shadow-[4px_4px_0_#FF6A00]">DATA WORKFLOWS</div>
+        <div className="absolute bottom-28 left-1/3 border-2 border-[#FF6A00] text-[#FF6A00] px-3 py-1 font-bold text-xs uppercase rotate-[-2deg] shadow-[4px_4px_0_#FF6A00] hidden md:block">PYTHON + n8n</div>
 
         <div className="max-w-5xl">
           <h1
